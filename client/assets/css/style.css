@@ -1,0 +1,43 @@
+.container {
+  margin: 0 auto;
+  width: 970px;
+}
+
+th, td {
+  padding: 20px;
+  margin: 20px;
+  border-right: solid 1px black;
+}
+
+th {
+  background-color: #eee;
+}
+#left-pane {
+  width: 200px;
+}
+
+#left-pane, #right-table {
+  display: inline-block;
+  vertical-align: top;
+}
+#right-table {
+  margin-left: 30px;
+}
+.aBlock {
+  display: inline-block;
+  width: 180px;
+  vertical-align: top;
+  border: solid 1px #eee;;
+}
+.center_text {
+  margin-left: 100px;
+}
+.err {
+  color: red;
+}
+/*.cell {
+  width: 800px;
+  margin-right: 20px;
+  padding-right: 10px;
+  border: solid 1px red;
+}*/

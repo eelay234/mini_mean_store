@@ -1,0 +1,29 @@
+<div>
+  <br>
+  <div id="search"><input type="text" ng-model="filter_name" placeholder="Search ..."></div><br>
+    <span ng-repeat="product in products | limitTo: 5 | filter: filter_name">
+      <div class="aBlock">
+      <img src="{{product.image}}">
+      {{product.name}}
+      ({{product.quantity}} left)
+      </div>
+    </span>
+    <br>
+    <a href="#/products" class="center_text">show more</a>
+    <br>
+  <div class="show-orders">
+  <h3>Recent orders</h3>
+    <ul ng-repeat="order in orders | orderBy: '-created_date' | limitTo: 3 | filter: filter_name">
+      <li>{{order.customerName}} purchased {{order.quantity}} {{order.productName}} <span am-time-ago="order.ordered_at"></span>.</li>
+    </ul>
+    <a href="#/orders" class="center_text">show all orders</a>
+  </div>
+  <div class="show-customers md-col-10">
+    <h3>New Customers</h3>
+    <ul ng-repeat="customer in customers | orderBy: '-created_date' | limitTo: 3 | filter: filter_name">
+      <li> {{customer.name}} joined the Store <span am-time-ago="customer.created_at"></span>.</li>
+    </ul>
+    <a href="#/customers" class="center_text">show all customers</a>
+  </div>
+  </div>
+</div>

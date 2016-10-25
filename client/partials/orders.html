@@ -1,0 +1,28 @@
+<h3>Add a New Order</h3>
+<p ng-show='errMessage' class="err">{{ errMessage }}</p>
+<form ng-submit="add_order()">
+  Customer:
+  <select ng-model="order.customer" required>
+    <option ng-repeat="x in customers" value="{{x._id}}">{{x.name}}</option>
+  </select>
+  Order: <input type="number" ng-model="order.quantity" required name = 'order_quantity' value="">
+  <select ng-model="order.product" required>
+    <option ng-repeat="x in products" value="{{x._id}}">{{x.name}}</option>
+  </select>
+  <input type="submit" value = 'Order'>
+</form>
+<p><input type="text" ng-model="filter_name" placeholder="Search name"></p>
+<table>
+<tr>
+  <th>Customer Name</th>
+  <th>Product</th>
+  <th>Quantity</th>
+  <th>Date</th>
+</tr>
+<tr ng-repeat = "order in orders | filter: filter_name">
+  <td>{{ order.customerName}}</td>
+  <td>{{ order.productName }}</td>
+  <td>{{ order.quantity }}</td>
+  <td> {{ order.created_date | date: "mediumDate"}}</td>
+</tr>
+</table>

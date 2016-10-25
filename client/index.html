@@ -1,0 +1,40 @@
+<html lang='en'  ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>Mini Mean Store</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- require angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular-messages.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
+  <script src="angular-cookies/angular-cookies.js"></script>
+  <script src="assets/app.js" charset="utf-8"></script>
+  <script src="assets/factories/customerFactory.js" charset="utf-8"></script>
+  <script src="assets/factories/productFactory.js" charset="utf-8"></script>
+  <script src="assets/controllers/productController.js" charset="utf-8"></script>
+  <script src="assets/factories/orderFactory.js" charset="utf-8"></script>
+  <script src="assets/controllers/orderController.js" charset="utf-8"></script>
+  <script src="assets/controllers/dashboardController.js" charset="utf-8"></script>
+  <script src="assets/controllers/customerController.js" charset="utf-8"></script>
+  <!-- <script src="assets/controllers/loginController.js" charset="utf-8"></script>
+  <script src="assets/factories/usersFactory.js" charset="utf-8"></script>
+  <script src="assets/factories/postsFactory.js" charset="utf-8"></script>
+  <script src="assets/controllers/indexController.js" charset="utf-8"></script>
+  <script src="assets/controllers/newController.js" charset="utf-8"></script>
+  <script src="assets/controllers/editController.js" charset="utf-8"></script>
+  <script src="assets/controllers/successController.js" charset="utf-8"></script>
+  <script src="assets/factories/friendsFactory.js" charset="utf-8"></script>
+  <script src="assets/services/friendService.js" charset="utf-8"></script>
+  <script src="assets/services/userService.js" charset="utf-8"></script> -->
+</head>
+<body>
+<div class="container">
+  <a href="#/">Dashboard</a> | <a href="#/products">Products</a> | <a href="#/orders">Orders</a> | <a href="#/customers">Customers</a>
+  <div ng-view>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<br><div id="left-pane">
+  <p><input type="text" ng-model="filter_prouct_name" placeholder="Search name"></p>
+  <h3>Add a New Product</h3>
+  <p ng-show='errMessage' class="err">{{ errMessage }}</p>
+  <form ng-submit="add_product()">
+    Name: <input type="text" required ng-model="product.name" name = 'product_name' value=""><br>
+    Image(url): <input type="text" required ng-model="product.image" name = 'image' placeholder="http://"><br>
+    Description: <input type="text" required ng-model="product.description" name = 'description' value=""><br>
+    Initial Quantity: <input type="Number" required ng-model="product.quantity" name = 'quantity' value=""><br>
+    <input type="submit" value = 'Add'>
+  </form>
+</div>
+<div id="right-table">
+
+  <div class="row">
+      <div ng-repeat="product in products">
+          <div class="clearfix" ng-if="$index %3 == 0"></div>
+          <div class="col-md-4 cell">
+            <img src="{{product.image}}">
+            {{product.name}}
+            ({{product.quantity}} left)
+          </div>
+      </div>
+  </div>
+</div>
